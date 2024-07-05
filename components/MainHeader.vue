@@ -4,10 +4,10 @@ import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
 const navigation = [
-  { name: "Product", href: "#" },
+  { name: "Blog", href: "/blog" },
   { name: "Features", href: "#" },
   { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "About", href: "/about" },
 ];
 
 const mobileMenuOpen = ref(false);
