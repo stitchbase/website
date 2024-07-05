@@ -1,5 +1,3 @@
-import tailwindTypography from "@tailwindcss/typography";
-
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
@@ -12,10 +10,5 @@ export default defineNuxtConfig({
   ],
   disqus: {
     shortname: "your-disqus-shortname",
-  },
-  tailwindcss: {
-    config: {
-      plugins: [tailwindTypography],
-    },
   },
 });
