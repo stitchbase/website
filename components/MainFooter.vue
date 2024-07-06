@@ -1,13 +1,17 @@
 <script setup>
 import { defineComponent, h } from "vue";
 
+const config = useAppConfig();
+
 const day = new Date();
 const year = day.getFullYear();
 
-const navigation = [
+const startYear = year == config.startYear ? "" : `${config.startYear} - `;
+
+const socialLinks = [
   {
     name: "Facebook",
-    href: "#",
+    href: config.facebookUrl,
     icon: defineComponent({
       render: () =>
         h("svg", { fill: "currentColor", viewBox: "0 0 24 24" }, [
@@ -21,7 +25,7 @@ const navigation = [
   },
   {
     name: "Instagram",
-    href: "#",
+    href: config.instagramUrl,
     icon: defineComponent({
       render: () =>
         h("svg", { fill: "currentColor", viewBox: "0 0 24 24" }, [
@@ -35,7 +39,7 @@ const navigation = [
   },
   {
     name: "X",
-    href: "#",
+    href: config.xUrl,
     icon: defineComponent({
       render: () =>
         h("svg", { fill: "currentColor", viewBox: "0 0 24 24" }, [
@@ -47,7 +51,7 @@ const navigation = [
   },
   {
     name: "Reddit",
-    href: "#",
+    href: config.redditUrl,
     icon: defineComponent({
       render: () =>
         h("svg", { fill: "currentColor", viewBox: "0 0 24 24" }, [
@@ -58,25 +62,30 @@ const navigation = [
     }),
   },
 ];
+
+const privacyUrl = "/privacy";
 </script>
 
 <template>
   <footer class="bg-white">
     <div class="py-12 md:flex md:items-center md:justify-between">
       <div class="flex justify-center space-x-6 md:order-2">
-        <a
-          v-for="item in navigation"
-          :key="item.name"
-          :href="item.href"
-          class="text-gray-400 hover:text-gray-500"
-        >
-          <span class="sr-only">{{ item.name }}</span>
-          <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
-        </a>
+        <template v-for="item in socialLinks" :key="item.name">
+          <a
+            v-if="item.href"
+            :href="item.href"
+            class="text-gray-400 hover:text-gray-500"
+          >
+            <span class="sr-only">{{ item.name }}</span>
+            <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
+          </a>
+        </template>
       </div>
+
       <div class="mt-8 md:order-1 md:mt-0">
         <p class="text-center text-xs leading-5 text-gray-500">
-          &copy; {{ year }} stichbase. All rights reserved.
+          &copy; {{ startYear }}{{ year }} {{ config.companyName }}. All rights
+          reserved. <LibLink :to="privacyUrl">Privacy Policy</LibLink>
         </p>
       </div>
     </div>

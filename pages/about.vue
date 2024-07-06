@@ -1,3 +1,3 @@
 <template>
-  <Hero />
+  <PageHeader heading="About stitchbase" />
 </template>

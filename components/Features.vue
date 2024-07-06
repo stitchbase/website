@@ -2,7 +2,7 @@
   <div class="bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:text-center">
-        <h2 class="text-base font-semibold leading-7 text-indigo-600">
+        <h2 class="text-base font-semibold leading-7 text-blue-600">
           Deploy faster
         </h2>
         <p
@@ -30,7 +30,7 @@
             >
               <component
                 :is="feature.icon"
-                class="h-5 w-5 flex-none text-indigo-600"
+                class="h-5 w-5 flex-none text-blue-600"
                 aria-hidden="true"
               />
               {{ feature.name }}
@@ -42,7 +42,7 @@
               <p class="mt-6">
                 <a
                   :href="feature.href"
-                  class="text-sm font-semibold leading-6 text-indigo-600"
+                  class="text-sm font-semibold leading-6 text-blue-600"
                   >Learn more <span aria-hidden="true">→</span></a
                 >
               </p>

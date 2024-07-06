@@ -1,9 +1,7 @@
 <template>
   <div class="bg-white px-6 py-32 lg:px-8">
     <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-      <p class="text-base font-semibold leading-7 text-indigo-600">
-        Introducing
-      </p>
+      <p class="text-base font-semibold leading-7 text-blue-600">Introducing</p>
       <h1
         class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
       >
@@ -27,7 +25,7 @@
         <ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
           <li class="flex gap-x-3">
             <CheckCircleIcon
-              class="mt-1 h-5 w-5 flex-none text-indigo-600"
+              class="mt-1 h-5 w-5 flex-none text-blue-600"
               aria-hidden="true"
             />
             <span
@@ -39,7 +37,7 @@
           </li>
           <li class="flex gap-x-3">
             <CheckCircleIcon
-              class="mt-1 h-5 w-5 flex-none text-indigo-600"
+              class="mt-1 h-5 w-5 flex-none text-blue-600"
               aria-hidden="true"
             />
             <span
@@ -50,7 +48,7 @@
           </li>
           <li class="flex gap-x-3">
             <CheckCircleIcon
-              class="mt-1 h-5 w-5 flex-none text-indigo-600"
+              class="mt-1 h-5 w-5 flex-none text-blue-600"
               aria-hidden="true"
             />
             <span
@@ -78,7 +76,7 @@
           Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis
           diam.
         </p>
-        <figure class="mt-10 border-l border-indigo-600 pl-9">
+        <figure class="mt-10 border-l border-blue-600 pl-9">
           <blockquote class="font-semibold text-gray-900">
             <p>
               “Vel ultricies morbi odio facilisi ultrices accumsan donec lacus

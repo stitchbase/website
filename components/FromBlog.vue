@@ -24,7 +24,7 @@
           <div class="flex">
             <a
               :href="featuredPost.href"
-              class="text-sm font-semibold leading-6 text-indigo-600"
+              class="text-sm font-semibold leading-6 text-blue-600"
               aria-describedby="featured-post"
               >Continue reading <span aria-hidden="true">&rarr;</span></a
             >

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-indigo-700 py-16 sm:py-24 lg:py-32">
+  <div class="bg-blue-700 py-16 sm:py-24 lg:py-32">
     <div
       class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8"
     >
@@ -28,14 +28,14 @@
           />
           <button
             type="submit"
-            class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             Subscribe
           </button>
         </div>
         <p class="mt-4 text-sm leading-6 text-gray-300">
           We care about your data. Read our
-          <a href="#" class="font-semibold text-white hover:text-indigo-50"
+          <a href="#" class="font-semibold text-white hover:text-blue-50"
             >privacy&nbsp;policy</a
           >.
         </p>
