@@ -1,8 +1,10 @@
 <template>
   <main>
-    <Hero />
-    <CallToAction />
-    <Features />
-    <Newsletter />
+    <HomeHero />
+    <HomeFeatures />
+    <HomeNewsletter />
+    <HomeAbout />
+    <HomeFAQ />
+    <HomeBlogList />
   </main>
 </template>

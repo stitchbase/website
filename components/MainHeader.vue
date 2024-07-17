@@ -3,55 +3,59 @@ import { ref } from "vue";
 import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
-const config = useAppConfig();
-
-const homeHref = "/";
-
 const navigation = [
-  { name: "Home", href: homeHref },
-  { name: "About", href: "/about" },
-  { name: "Blog", href: "/blog" },
+  { name: "About", href: "#about" },
+  { name: "FAQ", href: "#faq" },
+  { name: "Blog", href: "#blog" },
 ];
 
 const mobileMenuOpen = ref(false);
 </script>
 
 <template>
-  <header class="bg-white">
-    <nav class="flex items-center justify-between py-6" aria-label="Global">
-      <a :href="homeHref" class="-m-1.5 p-1.5">
-        <span class="sr-only">{{ config.companyName }}</span>
-        <img
-          class="h-8 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-          alt=""
-        />
+  <header class="container">
+    <nav
+      class="relative flex items-center justify-between my-6 overflow-hidden"
+      aria-label="Global"
+    >
+      <a href="/">
+        <AppLogo />
       </a>
-      <div class="flex lg:hidden">
-        <button
-          type="button"
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-          @click="mobileMenuOpen = true"
-        >
-          <span class="sr-only">Open main menu</span>
-          <Bars3Icon class="h-6 w-6" aria-hidden="true" />
-        </button>
+      <div class="absolute bottom-[26px] left-[194px]">
+        <DashedLine />
       </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a
-          v-for="item in navigation"
-          :key="item.name"
-          :href="item.href"
-          class="text-sm font-semibold leading-6 text-gray-900"
-          >{{ item.name }}</a
-        >
-        <!-- <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-          >Log in <span aria-hidden="true">&rarr;</span></a
-        > -->
+      <div v-if="navigation.length" class="pb-6">
+        <div class="flex md:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue"
+            @click="mobileMenuOpen = true"
+          >
+            <span class="sr-only">Open main menu</span>
+            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+          </button>
+        </div>
+        <div class="hidden md:flex md:gap-x-8 md:items-center">
+          <a
+            v-for="item in navigation"
+            :key="item.name"
+            :href="item.href"
+            class="font-semibold leading-6 text-gray-900"
+          >
+            {{ item.name }}
+          </a>
+          <a
+            href="#newsletter"
+            class="bg-blue py-1 px-3 rounded-xl text-sm font-bold leading-6 text-white"
+          >
+            Sign Up
+          </a>
+        </div>
       </div>
     </nav>
     <Dialog
-      class="lg:hidden"
+      v-if="navigation.length"
+      class="md:hidden"
       @close="mobileMenuOpen = false"
       :open="mobileMenuOpen"
     >
@@ -60,13 +64,8 @@ const mobileMenuOpen = ref(false);
         class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
       >
         <div class="flex items-center justify-between">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">{{ config.companyName }}</span>
-            <img
-              class="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt=""
-            />
+          <a href="/">
+            <AppLogo />
           </a>
           <button
             type="button"
@@ -85,16 +84,18 @@ const mobileMenuOpen = ref(false);
                 :key="item.name"
                 :href="item.href"
                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >{{ item.name }}</a
               >
+                {{ item.name }}
+              </a>
             </div>
-            <!-- <div class="py-6">
+            <div class="py-6">
               <a
-                href="#"
+                href="#newsletter"
                 class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Log in</a
               >
-            </div> -->
+                Sign Up
+              </a>
+            </div>
           </div>
         </div>
       </DialogPanel>

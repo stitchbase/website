@@ -67,7 +67,7 @@ const privacyUrl = "/privacy";
 </script>
 
 <template>
-  <footer class="bg-white">
+  <footer class="container">
     <div class="py-12 md:flex md:items-center md:justify-between">
       <div class="flex justify-center space-x-6 md:order-2">
         <template v-for="item in socialLinks" :key="item.name">
@@ -83,7 +83,8 @@ const privacyUrl = "/privacy";
       </div>
 
       <div class="mt-8 md:order-1 md:mt-0">
-        <p class="text-center text-xs leading-5 text-gray-500">
+        <AppLogo class="text-center md:text-left" isSmall />
+        <p class="-mt-2 text-center text-xs leading-5 text-gray-500">
           &copy; {{ startYear }}{{ year }} {{ config.companyName }}. All rights
           reserved. <LibLink :to="privacyUrl">Privacy Policy</LibLink>
         </p>

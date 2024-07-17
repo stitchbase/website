@@ -6,17 +6,36 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
+        red: {
+          DEFAULT: colors.rose[600],
+        },
+        orange: {
+          DEFAULT: colors.orange[500],
+        },
+        yellow: {
+          DEFAULT: colors.yellow[500],
+        },
+        green: {
+          DEFAULT: colors.teal[600],
+        },
         blue: {
-          DEFAULT: colors.orange[700],
+          DEFAULT: colors.sky[600],
+        },
+        purple: {
+          DEFAULT: colors.purple[600],
+        },
+        gray: {
+          DEFAULT: colors.slate[600],
         },
       },
     },
     colors: {
       transparent: "transparent",
       current: "currentColor",
+      page: colors.stone[50],
       black: colors.black,
       white: colors.white,
-      gray: colors.gray,
+      gray: colors.slate,
       red: colors.rose,
       orange: colors.orange,
       yellow: colors.yellow,
